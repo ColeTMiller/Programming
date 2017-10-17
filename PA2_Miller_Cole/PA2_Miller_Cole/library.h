@@ -4,20 +4,38 @@
 #ifndef _LIBRARY_H_
 #define _LIBRARY_H_
 
+#include <vector>
+#include <string>
+
 #include "book.h"
+
+using namespace std; 
 
 class library
 {
-	Book*BooksNumber;
-	double ISBN;
-	string Title; 
-	int lName;
-	int fName; 
+private: 
+	Book* Books;
+
+	string ISBN;
+	string title; 
+	string lName;
+	string fName; 
+	bool setStatues; 
 
 public:
 		//Constructor 
-	library(Book*BooksNumber, double ISBN, string Title,
-																int lName, int fName);
+	library();
+	library(string fileName);
+
+	//Interface
+	void addBook(Book* Book);
+	void checkBookOut(string ISBN);
+	void checkBookIn(string ISBN);
+	void printBookList();
+	
+private:
+
+	std::vector<Book> loadBooks(string fileName);
 
 };
 

@@ -1,45 +1,31 @@
+#include <string>
+
 #include "book.h"
 
-Book::Book()
+Book::Book(std::string ISBN, std::string title, std::string lName, std::string fName) :ISBN(ISBN), title(title), lName(lName), fName(fName)
+{}
+
+std::string Book::getISBNNummber() const
 {
+	return ISBN;
 }
 
-Book::Book(double ISBN, std::string Ttile, int lName, int fName)
+std::string Book::gettitleName() const
 {
+	return title;
 }
 
-void Book::setISBNNumber(double ISBN)
+std::string Book::getlName() const
 {
+	return lName;
 }
 
-void Book::setTitleName(std::string Title)
+std::string Book::getfName() const
 {
+	return fName;
 }
 
-void Book::setlName(int lName)
+bool Book::SetStatues()
 {
-}
-
-void Book::setfName(int fName)
-{
-}
-
-double Book::getISBNNumber() const
-{
-	return 0.0;
-}
-
-std::string Book::getTtileName() const
-{
-	return std::string();
-}
-
-int Book::getlName() const
-{
-	return 0;
-}
-
-int Book::getfName() const
-{
-	return 0;
+	return false;
 }

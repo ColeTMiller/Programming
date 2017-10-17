@@ -2,34 +2,29 @@
 #define _Book_H_
 
 #include <string>
-
+using namespace std; 
 class Book 
 {
 private:
-	double ISBN;
-	string Title;
-	int  lName; 
-	int fName; 
+		string ISBN;
+		string title;
+		string lName;
+		string fName;
+		bool SetStatues; 
 
 public:
-		// Constructor 
-		Book();
-		Book(double ISBN, std::string Ttile,
-			int lName, int fName); 
+	// Constructor 
+	Book(string ISBN, string title, string lName, string fName); 
+	
+	// getter 
+	string getISBNNummber() const;
+	string gettitleName()  const;
+	string getlName() const;
+	string getfName() const;
 
-		// Desctructor 
 
-		// setter methods 
-		void setISBNNumber(double ISBN);
-		void setTitleName(std::string Title); 
-		void setlName(int lName);
-		void setfName(int fName); 
-
-		//getter methods
-		double getISBNNumber() const;
-		std::string getTtileName() const;
-		int getlName() const;
-		int getfName() const; 
+	// setter 
+	bool SetStatues();
 	
 };
 #endif // !_Book_H_ 
