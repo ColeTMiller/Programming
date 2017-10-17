@@ -1,24 +1,38 @@
 //Cole Miller 
-// October 11, 2017
-// library.h
-#ifndef _LIBRARY_H_
-#define _LIBRARY_H_
+//October 11, 2017
+//Library.h
+
+#ifndef  _Library_H_
+#define _Library_H_
 
 #include "book.h"
+#include <string>
 
-class library
+class Library
 {
-	Book*BooksNumber;
-	double ISBN;
-	string Title; 
-	int lName;
-	int fName; 
+	Book * Books;
+		std::string  ISBN;
+		std::string title;
+		std::string lNmae;
+		std::string fName; 
 
 public:
 		//Constructor 
-	library(Book*BooksNumber, double ISBN, string Title,
-																int lName, int fName);
+	Library();
+	Library(std::string FILENAME); 
 
+	// interface 
+	void loadBooks(std::string FileNAME);
+	void addBook(Book *  Books); 
+	void checkBookOut(std::string ISBN);
+	void checkBookIn(std::string ISBN);
+	void printBookList(); 
+
+private:
+	bool StatuesofBook(); 
+	bool sortByName(Book &rhs, Book &lhs); 
+	
+	
 };
 
-#endif //!_LIBRARY_H_
+#endif

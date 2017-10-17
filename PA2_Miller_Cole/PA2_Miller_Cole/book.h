@@ -1,35 +1,29 @@
 #ifndef _Book_H_
 #define _Book_H_
 
-#include <string>
+#include <string> 
+
 
 class Book 
 {
 private:
-	double ISBN;
-	string Title;
-	int  lName; 
-	int fName; 
+	std:: string ISBN;
+	std:: string title; 
+	std:: string lName;
+	std:: string fName;
+	bool status; 
 
 public:
-		// Constructor 
-		Book();
-		Book(double ISBN, std::string Ttile,
-			int lName, int fName); 
+		//constructor
+	Book(std:: string ISBN, std:: string title,std:: string lName, std::string fName); 
 
-		// Desctructor 
+		//getter 
+	void getISBN(std::string ISBN);
+	void getTtile(std::string title);
+	void getlName(std::string lName);
+	void getfName(std::string fName); 
 
 		// setter methods 
-		void setISBNNumber(double ISBN);
-		void setTitleName(std::string Title); 
-		void setlName(int lName);
-		void setfName(int fName); 
-
-		//getter methods
-		double getISBNNumber() const;
-		std::string getTtileName() const;
-		int getlName() const;
-		int getfName() const; 
-	
+		void setSatues(bool status); 
 };
 #endif // !_Book_H_ 

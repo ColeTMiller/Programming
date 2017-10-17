@@ -112,11 +112,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="book.cpp" />
+    <ClCompile Include="Library.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="book.h" />
-    <ClInclude Include="library.h" />
+    <ClInclude Include="Library.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="BookFile.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
