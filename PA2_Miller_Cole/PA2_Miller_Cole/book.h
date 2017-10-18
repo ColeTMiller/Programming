@@ -14,6 +14,7 @@ private:
 
 public:
 	// Constructor 
+	Book(); 
 	Book(string ISBN, string title, string lName, string fName); 
 	
 	// getter 

@@ -8,46 +8,42 @@
 using namespace std;
 
 
-library::library()
+Library::Library()
 {}
 
-library::library(string fileName)
+Library::Library(string fileName)
 {
 	
 }
 
-void library::addBook(Book * Book)
+void Library::addBook(Book * Book)
 {
 }
 
-void library::checkBookOut(string ISBN)
+void Library::checkBookOut(string ISBN)
+{
+
+}
+
+void Library::checkBookIn(string ISBN)
 {
 }
 
-void library::checkBookIn(string ISBN)
+void Library::printBookList()
 {
 }
 
-void library::printBookList()
+std::vector<Book> Library::loadBooks(string fileName)
 {
-}
 
-std::vector<Book> library::loadBooks(string fileName)
-{
-	Book* Books;
+	ifstream bookFile(fileName); 
 
-	ifstream bookFile(fileName);
+	loadBooks = new Book; 
 
-	bookFile = new Book[Books]; 
-
-	bookFile.open(ios::in); 
-
-	if (!bookFile)
-		return "CANNOT OPEN FILE";
-	system("PAUSE");
-
-
-	return std::vector<Book>();
-
+	for (bookFile << loadBooks; loadBooks++;);
+	{
+		loadBooks << ISBN << title << lName << fName; 
+	}
+		return std::vector<Book>(loadBooks);
 }
 

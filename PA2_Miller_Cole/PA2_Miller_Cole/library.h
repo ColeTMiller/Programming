@@ -11,7 +11,7 @@
 
 using namespace std; 
 
-class library
+class Library
 {
 private: 
 	Book* Books;
@@ -24,8 +24,8 @@ private:
 
 public:
 		//Constructor 
-	library();
-	library(string fileName);
+	Library();
+	Library(string fileName);
 
 	//Interface
 	void addBook(Book* Book);
