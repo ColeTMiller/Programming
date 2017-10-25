@@ -1,44 +1,28 @@
-#include <iomanip>
-#include <iostream>
-#include <fstream>	
-#include <vector>
-#include <string>
-
-#include "library.h"
-using namespace std;
-
+#include "Library.h"
 
 Library::Library()
-{}
-
-Library::Library(string fileName)
-{
- 
-}
-
-void Library::loadBooks(std::vector<Book>)
-{
-	ifstream bookFile(fileName);
-
-	loadBooks = new Book;
-
-	for (bookFile << loadBooks; loadBooks++;);
-	{
-		loadBooks << ISBN << title << authorLastName << authorFirstName;
-	}
-	return std::vector<Book>(loadBooks);
-}
-
-void Library::addBook(Book * Book)
 {
 }
 
-void Library::checkBookOut(string ISBN)
+Library::Library(std::string FILENAME)
 {
-
+	FILENAME = "BookFile.txt"; 
 }
 
-void Library::checkBookIn(string ISBN)
+void Library::loadBooks(std::string FILENAME)
+{
+	
+}
+
+void Library::addBook(Book * Books)
+{
+}
+
+void Library::checkBookOut(std::string ISBN)
+{
+}
+
+void Library::checkBookIn(std::string ISBN)
 {
 }
 
@@ -46,5 +30,13 @@ void Library::printBookList()
 {
 }
 
+bool Library::StatuesofBook()
+{
+	return false;
+}
 
-
+bool Library::sortByName(Book & rhs, Book & lhs)
+{
+	std::string name1(lhs.lName), name2(rhs.lNmae)
+		return  name1 < name2; 
+}
