@@ -5,7 +5,7 @@
 Book::Book()
 {}
 
-Book::Book(std::string ISBN, std::string title, std::string lName, std::string fName) :ISBN(ISBN), title(title), lName(lName), fName(fName)
+Book::Book(std::string ISBN, std::string title, std::string lName, std::string fName) :ISBN(ISBN), title(title), authorLastName(lName), authorFirstName(fName)
 {}
 
 std::string Book::getISBNNummber() const
@@ -18,14 +18,14 @@ std::string Book::gettitleName() const
 	return title;
 }
 
-std::string Book::getlName() const
+std::string Book::getauthorLastName() const
 {
-	return lName;
+	return authorLastName;
 }
 
-std::string Book::getfName() const
+std::string Book::getauthorFirstName() const
 {
-	return fName;
+	return authorFirstName;
 }
 
 bool Book::SetStatues()

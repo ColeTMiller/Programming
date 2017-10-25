@@ -14,13 +14,7 @@ using namespace std;
 class Library
 {
 private: 
-	Book* Books;
-
-	string ISBN;
-	string title; 
-	string lName;
-	string fName; 
-	bool setStatues; 
+	std::vector<Book> books; 
 
 public:
 		//Constructor 
@@ -28,14 +22,13 @@ public:
 	Library(string fileName);
 
 	//Interface
+	void loadBooks(std::vector<Book>); 
 	void addBook(Book* Book);
 	void checkBookOut(string ISBN);
 	void checkBookIn(string ISBN);
 	void printBookList();
 	
-private:
 
-	std::vector<Book> loadBooks(string fileName);
 
 };
 

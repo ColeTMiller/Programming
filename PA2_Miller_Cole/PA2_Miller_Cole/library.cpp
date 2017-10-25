@@ -13,7 +13,20 @@ Library::Library()
 
 Library::Library(string fileName)
 {
-	
+ 
+}
+
+void Library::loadBooks(std::vector<Book>)
+{
+	ifstream bookFile(fileName);
+
+	loadBooks = new Book;
+
+	for (bookFile << loadBooks; loadBooks++;);
+	{
+		loadBooks << ISBN << title << authorLastName << authorFirstName;
+	}
+	return std::vector<Book>(loadBooks);
 }
 
 void Library::addBook(Book * Book)
@@ -33,17 +46,5 @@ void Library::printBookList()
 {
 }
 
-std::vector<Book> Library::loadBooks(string fileName)
-{
 
-	ifstream bookFile(fileName); 
-
-	loadBooks = new Book; 
-
-	for (bookFile << loadBooks; loadBooks++;);
-	{
-		loadBooks << ISBN << title << lName << fName; 
-	}
-		return std::vector<Book>(loadBooks);
-}
 

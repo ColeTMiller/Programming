@@ -1,0 +1,17 @@
+polymorhism and virtual member funcitons 
+	-polymorhism 
+		- inheritance 
+		- virtural funcitons
+		- override 
+		- only works with refears valuable 
+
+rediffing and overrideing is their is no difference 
+	- overriding is overriding a virtual funciton 
+	- redeadining a virtural function 
+
+declared type
+graded activity
+ 
+actual type 
+only happens when using virtual functions 
+

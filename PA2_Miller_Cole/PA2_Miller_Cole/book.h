@@ -3,25 +3,26 @@
 
 #include <string>
 using namespace std; 
+
 class Book 
 {
 private:
 		string ISBN;
 		string title;
-		string lName;
-		string fName;
+		string authorLastName;
+		string authorFirstName;
 		bool SetStatues; 
 
 public:
 	// Constructor 
 	Book(); 
-	Book(string ISBN, string title, string lName, string fName); 
+	Book(string ISBN, string title, string authorLastName, string authorFirstName); 
 	
 	// getter 
 	string getISBNNummber() const;
 	string gettitleName()  const;
-	string getlName() const;
-	string getfName() const;
+	string getauthorLastName() const;
+	string getauthorFirstName() const;
 
 
 	// setter 
