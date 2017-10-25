@@ -12,8 +12,8 @@ local library
 #include <string>
 using namespace std;
 
-#include "book.h"		// for a book type
-#include "library.h"	// for a library type
+#include "book.h"			// for a book type
+#include "library.h"			// for a library type
 
 // Global variables
 const string FILENAME = "BookFile.txt";		// name of file that contains book info
@@ -21,13 +21,13 @@ const string FILENAME = "BookFile.txt";		// name of file that contains book info
 
 
 // Function declarations
-void addBook(Library & lib);
+
 
 int main()
 {
-	Library library(FILENAME);	// create a library of books
-	char choice;				// user's menu choice
-	string ISBN;				// ISBN value to search for
+	Library  library(FILENAME);				// create a library of books
+	char choice;									    		// user's menu choice
+	string ISBN;											  // ISBN value to search for
 
 	// loop until we want to quit
 	do
@@ -103,10 +103,10 @@ int main()
 // It will use the information to create a book and add it to Library lib
 void addBook(Library & lib)
 {
-	string ISBN;				// ISBN number of book
+	string ISBN;								 // ISBN number of book
 	string authorLastName;		// Author last name
 	string authorFirstName;		// Author first name
-	string title;				// Title of the book
+	string title;								   // Title of the book
 
 	cout << "Enter the ISBN of the book: ";
 	cin >> ISBN;
