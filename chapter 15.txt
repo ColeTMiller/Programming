@@ -1,0 +1,60 @@
+polymorhism and virtual member funcitons 
+	-polymorhism 
+		- inheritance 
+		- virtural funcitons
+		- override 
+		- only works with refears valuable 
+
+rediffing and overrideing is their is no difference 
+	- overriding is overriding a virtual funciton 
+	- redeadining a virtural function 
+
+declared type
+graded activity
+ 
+actual type 
+only happens when using virtual functions 
+
+
+	Static Binding
+
+	Virtual Function 
+		- virtual function is redefine in the child class 
+		- then we get dynamic bounding at runtime 
+			- chooses between which child function is to be called 
+	
+		- parent class * pc =  new ChildClass(),
+			pc -> method()
+			- parent class = declardd type 
+			- childClass() = actual type 
+			- (ChildClass)pc -> method(), 
+Override 
+	-  extract same signature but the parent class has a virtual infornt of it 
+	- virutal m1()-> m1()override; 
+	- virtual m2() -> mTwo() legally
+	- virutal m2() -> mtwo() override is not legally
+	- virutal m2() -> m2() override legal 
+
+final 
+	-  can replace with a function 
+	- member function can not be redefined 
+	- can be redifen in the child class 
+	- virtual m3() final, 
+	- ture version m3()final, 
+
+Abstract Base Classes 
+	- Partent Abstract pa; 
+	- donot use virutal void Y() = 0; 
+
+muitiple inheritance 
+	- P1 -> C -> P2
+	
+	- P2 and P1 -> GP1
+	
+	- C -> P1 and P2 -> GP1
+	
+static constexpr double 
+	- static belongs to the class 
+	- constexpr =  new keyword in C++ 11
+		- making it a const so you won't have to implement it in the .h file and also in the .cpp again 
+
