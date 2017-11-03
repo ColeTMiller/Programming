@@ -6,24 +6,24 @@
 #include <string>
 
 //ship is an abstrct base class 
-class Ship 
+class Ship
 {
 private:
-		std::string name;		 // ship name 
-		std::string yearBuilt;   // Year it was built 
+	std::string name;		 // ship name 
+	std::string yearBuilt;   // Year it was built 
 
 public:
 	// constructor 
 	Ship(std::string name, std::string yearBuilt);
 
 	//Getters
-	std::string getName() const; 
-	std::string getYearBuilt() const; 
+	std::string getName() const;
+	std::string getYearBuilt() const;
 
 	//Print function 
-	virtual void print(); 
+	virtual void print();
 
 	//Pure virtual function 
-	virtual void makeItGo() = 0; 
-}
-#endif
+	virtual void makeItGo() = 0;
+};
+#endif; 

@@ -3,8 +3,9 @@
 #include "cargoship.h"
 
 CargoShip::CargoShip(std::string name, std::string yearBuilt, int tonnage) :
-	Ship(name, yearBuilt), tonnage(tonnage); 
+	Ship(name, yearBuilt), tonnage(tonnage) 
 {
+
 }
 
 int CargoShip::getTonnage() const

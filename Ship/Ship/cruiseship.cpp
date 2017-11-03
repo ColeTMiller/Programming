@@ -3,7 +3,7 @@
 #include "cruiseship.h"
 
 CruiseShip::CruiseShip(std::string name, std::string yearBuilt, int numPassengers) :
-	Ship(name, yearBuilt), numPassengers(numPassengers) 
+	Ship(name, yearBuilt), numPasengers(numPassengers) 
 {
 }
 
