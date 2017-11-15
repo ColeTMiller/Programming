@@ -85,23 +85,115 @@ public:
 
 		return pElems[index]; 
 	}
-	MyVector<T> operator+(const MyVector<T>& rhs) const;
-	MyVector<T> operator- (cosnt MyVector<t>& rhs) const;
+	MyVector<T> operator+(const MyVector<T>& rhs) const
+	{
+		size_type maxSize, minSize;
+		if (this->size > rhs.size)
+		{
+			maxSize = size;
+			minSize = rhs.size;
+		}
+		else
+		{
+			maxSize = rhs.size;
+			minSize = size; 
+		}
+		MyVector<T> result(maxSize); 
+
+		for (size_type i = 0; i < minSize; i++)
+		{
+			result.add(pElems[i] + rhs.pElems[i]);
+		}
+		for (size_type i = minSize; i < maxSize; i++)
+		{
+			result.add((this->size, > rhs.size) ? pElems[i] : rhs.pElems[i]); 
+		}
+		return result; 
+	}
+	MyVector<T> operator- (cosnt MyVector<t>& rhs) const
+	{
+		size_type maxSize, minSize;
+		if (this->size > rhs.size)
+		{
+			maxSize = size;
+			minSize = rhs.size;
+		}
+		else
+		{
+			maxSize = rhs.size;
+			minSize = size;
+		}
+		MyVector<T> result(maxSize);
+
+		for (size_type i = 0; i < minSize; i++)
+		{
+			result.add(pElems[i] - rhs.pElems[i]);
+		}
+		for (size_type i = minSize; i < maxSize; i++)
+		{
+			result.add((this->size, > rhs.size) ? pElems[i] : -1 * rhs.pElems[i]);
+		}
+		return result;
+	}
 
 	//Getters 
 	size_type getSize() const;
 	size_type getCapactiy() const;
 
 	//General methods 
-	T add(T elem); 
-	T remove();
+	T add(T elem)
+	{
+		if (cappacity == 0)
+		{
+			if (pElems)
+				dele[] pElems;
+			capacity = 1; 
+			pElems = new T[capacity]; 
+		}
+		if (size < capacity)
+		{
+			pElems[size] = elems;
+		}
+		else
+		{
+			capacity *= 2;
+			T + pNewElems = new T[capacity]; 
+			for (size_type i = 0; i < size; i++)
+			{
+				pNewElems[i] = pElems[i]; 
+			}
+			delete[] pElems;
+			pElems = pNewElems; 
+			pElems[size] = elem; 
+		}
+		size++; 
+		return elem; 
+
+	}
+
+	T remove()
+	{
+		if (size == 0)
+			throw "Can not remove element from emepty container";
+
+		T elem = pElems[size - 1];
+		size--; 
+		return elem; 
+
+	}
 	T& at(const size_type index); 
+	{
+
+	}
 	bool constains(T elem);
 	bool isEmpty();
 
 	// Iterator methods 
 	iterator begin(); 
 	const_iterator begin() const;
+	{
+
+	}
 	iterator end();
 	const_iterator end() const; 
 
